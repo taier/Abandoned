@@ -40,7 +40,7 @@
 		<div class="jumbotron">
 			<h1>Welcome to Potato page!</h1>
 			<p>The controller generating this page is found at <code>APPPATH/classes/controller/potato.php</code>.</p>
-			<p>This view can be found at <code>APPPATH/views/welcome/index.php</code>.</p>
+			<p>This view can be found at <code>APPPATH/views/potato/index.php</code>.</p>
 			<h3> Task for Lena </h3>
 			<p> Using information above - create new page called "carrot". Put on it image with Giant Carrot!  </p>
 			<h3> Task for Dana </h3>
