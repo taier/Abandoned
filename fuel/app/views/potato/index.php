@@ -47,6 +47,7 @@
 			<p> Using information above - create new page called "orange". Put on it image with Unbelievably large Orange! </p>
 			<center><h2> Like This </h2>
 			<img src="http://www.foreignpolicy.com/files/images/Inbox_potato.jpg" alt="Big potato"></center>
+			<p>Lena was here ;)</p>
 		</div>
 		<hr/>
 		<footer>
