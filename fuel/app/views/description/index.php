@@ -40,14 +40,18 @@
 		<div class = "title">
 			<h2> <?php echo $title?> </h2>
 		</div>
-		<div class ="places">
-			 <?php foreach($places as $key=>$value): ?>
-			<ul>
-				<li> <a href= <?php echo Uri::create('description/index/'.$value); ?>> <?php echo $value?> </a> </li>
-			</ul>	
-			<?php endforeach; ?>
+		<div class ="WWT" style="display: inline">
+			<h4 style="display: inline;" > Take with: </h4> <?php echo $wwt?>  
+		</div>	
+		<div class = "location" style="display: inline;">
+			<h4 style="display: inline; margin-left:200px;"> Located at:</h4> <?php echo $location?> 
+		</div> 
+		<div class = "description">
+			<h3> Description </h3>
+			<p> <?php echo $description?> </p>
+			<center><img src =<?php echo $image_URL ?> alt = "Cool image"> </center>
 		</div>
-			
+
 	</div>
 <!-- END OF LOOK HERE!  -->	
 </body>
