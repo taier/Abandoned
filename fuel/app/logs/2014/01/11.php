@@ -28,3 +28,5 @@ ERROR - 2014-01-11 11:56:24 --> Notice - Trying to get property of non-object in
 ERROR - 2014-01-11 11:56:25 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/listing/index.php on line 40
 WARNING - 2014-01-11 10:08:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2014-01-11 10:14:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2014-01-11 16:04:09 --> 1045 - SQLSTATE[28000] [1045] Access denied for user '**********'@'localhost' (using password: YES) in /Applications/MAMP/htdocs/Abandoned/fuel/core/classes/database/pdo/connection.php on line 100
+ERROR - 2014-01-11 16:07:00 --> Parsing Error - syntax error, unexpected '"\n"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/listing.php on line 16
