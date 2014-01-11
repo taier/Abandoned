@@ -37,7 +37,16 @@
 		</div>
 	</header>
 	<div class="container">
-			<h1>Welcome to Listing page!</h1>
+		<div class = "title">
+			<h2> <?php echo $title?> </h2>
+		</div>
+		<div class ="places">
+			 <?php foreach($places as $key=>$value): ?>
+			<ul>
+				<li> <?php echo $value; ?> </li>
+			</ul>	
+			<?php endforeach; ?>
+		</div>
 			
 	</div>
 <!-- END OF LOOK HERE!  -->	
