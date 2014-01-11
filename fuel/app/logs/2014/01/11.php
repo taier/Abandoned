@@ -26,3 +26,5 @@ ERROR - 2014-01-11 11:56:01 --> Notice - Undefined variable: data in /Applicatio
 ERROR - 2014-01-11 11:56:02 --> Notice - Undefined variable: data in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/listing/index.php on line 40
 ERROR - 2014-01-11 11:56:24 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/listing/index.php on line 40
 ERROR - 2014-01-11 11:56:25 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/listing/index.php on line 40
+WARNING - 2014-01-11 10:08:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2014-01-11 10:14:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.

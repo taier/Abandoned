@@ -250,7 +250,7 @@ return array(
 	 * Paths MUST end with a directory separator (the DS constant)!
 	 */
 	'package_paths' => array(
-		PKGPATH
+		//PKGPATH
 	),
 
 
@@ -270,10 +270,12 @@ return array(
 		 *     array('auth'	=> PKGPATH.'auth/')
 		 * );
 		 */
-		// 'packages'  => array(
-		// 	//'orm',
-		// ),
-
+		'packages'  => array(
+			'orm',
+			'social',
+			'auth',
+			'email'
+		),
 		/**
 		 * These modules are always loaded on Fuel's startup. You can specify them
 		 * in the following manner:
