@@ -106,7 +106,7 @@ return array(
 	 * Fuel::L_INFO
 	 * Fuel::L_ALL
 	 */
-	// 'log_threshold'    => Fuel::L_WARNING,
+	 'log_threshold'    => Fuel::L_NONE,
 	// 'log_path'         => APPPATH.'logs/',
 	// 'log_date_format'  => 'Y-m-d H:i:s',
 
@@ -250,7 +250,7 @@ return array(
 	 * Paths MUST end with a directory separator (the DS constant)!
 	 */
 	'package_paths' => array(
-		PKGPATH
+		//PKGPATH
 	),
 
 
@@ -273,7 +273,8 @@ return array(
 		'packages'  => array(
 			'orm',
 			'oil',
-			'auth'
+			'auth',
+			'social'
 		),
 		/**
 		 * These modules are always loaded on Fuel's startup. You can specify them
