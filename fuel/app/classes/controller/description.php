@@ -11,7 +11,7 @@ class Controller_Description extends Controller {
 					$data["description"]= $value->description;
 					$data["wwt"] = $value->wtt;
 					$data["location"] = $value->address;
-					$data["image_URL"] ="http://img2.joyreactor.cc/pics/post/full/iphone-10-354052.jpeg";
+					$data["photo_URL"] =$value->photo_URL;
 				}
 		 }
 		return View::forge('description/index', $data);

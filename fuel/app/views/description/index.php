@@ -46,7 +46,7 @@
 		<div class = "description">
 			<h3> Description </h3>
 			<p> <?php echo $description?> </p>
-			<center><img src =<?php echo $image_URL ?> alt = "Cool image"> </center>
+			<center><img src =<?php echo $photo_URL ?> alt = "Cool image"> </center>
 		</div>
 
 	</div>

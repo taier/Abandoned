@@ -13,8 +13,8 @@ class Create_places {
 			'wtt' => array('type' => 'text'),
 			'address' => array('constraint' => 50, 'type' => 'varchar'),
 			'date' => array('type' => 'datetime'),
-			'user_id' => array('constraint' => 20, 'tpe' => 'int'),
-			'photo_id' => array('constraint' => 255, 'type' => 'varchar'),
+			'user_id' => array('constraint' => 20, 'type' => 'int'),
+			'photo_URL' => array('constraint' => 255, 'type' => 'varchar'),
 			'category' => array('constraint' => 50, 'type' => 'varchar')
 
 		), array('id'));
@@ -38,7 +38,7 @@ class Create_places {
 				    'address' =>"Somewhere in Sigulda",
 				    'date' => "2012-07-08 11:14:15.638276",
 				    'user_id' => "1",
-				    'photo_id' => "1",
+				    'photo_URL' => "http://www.pribaltica.ru/UF/Image/mar3.jpg",
 				    'category'=> "Castle"
 			));
 		$places->save();
@@ -52,7 +52,7 @@ class Create_places {
 				'address' => "Somewhere in Daugavpils",
 				'date' => "2012-07-08 11:14:15.638276",
 				'user_id' => "1",
-				'photo_id' => "1",
+				'photo_URL' => "http://www.ambermarks.com/Atteli/Mani/Daugavpils%20raj/Naujenes%20pag/Dinaburgas-pils-modelis5-22jun08.jpg",
 				'category'=> "Hospital"
 				));
 		$places->save();
@@ -66,7 +66,7 @@ class Create_places {
 				'address' => "Somewhere in Valmiera",
 				'date' => "2012-07-08 11:14:15.638276",
 				'user_id' => "1",
-				'photo_id' => "1",
+				'photo_URL' => "http://www.vieglicelot.lv/uimg/339733valmiera_2.jpg",
 				'category'=> "Hospital"
 				));
 		$places->save();

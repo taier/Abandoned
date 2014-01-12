@@ -18,10 +18,9 @@ class Controller_Creation extends Controller {
 				    'address' =>$_POST['address'],
 				    'date' => $realDate,
 				    'user_id' => "1",
-				    'photo_id' => "1",
+				    'photo_URL' => $_POST["photo_URL"],
 				    'category'=> $category->category_name
 			));
-		//$places->title = $title;
 		if($places->save()) {
 			Response::redirect('listing/index');
 		}

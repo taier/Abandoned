@@ -109,6 +109,12 @@
 	    echo Form::select("category", Input::post("category"), $categories);
 	    ?>
 
+	</br><label> Photo URL </label> </br>
+		<?php
+	     echo Form::input('photo_URL', 
+			Input::post('photo_URL', 
+			    isset($photo_URL) ? $place->photo_URL : '')); ?>
+
 		</br></br>
 		<div class="actions">
     <?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-default')); ?>
