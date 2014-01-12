@@ -95,19 +95,24 @@
 			Input::post('description', 
 			    isset($description) ? $place->description : '')); ?>
 
-		 </br><label> What to take</label> </br>
+		 </br><label> What to take </label> </br>
 		<?php
 	     echo Form::input('wtt', 
 			Input::post('wtt', 
 			    isset($wtt) ? $place->wtt : '')); ?>
 
-		</br><label> Address</label> </br>
+		</br><label> Address </label> </br>
 		<?php
 	     echo Form::input('address', 
 			Input::post('address', 
 			    isset($address) ? $place->address : '')); ?>
-		</div>
-		</br>
+
+		</br><label> Category </label> </br>
+		<?php
+	    echo Form::select("category", Input::post("category"), $categories);
+	    ?>
+
+		</br></br>
 		<div class="actions">
     <?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-default')); ?>
 		</div>

@@ -8,6 +8,7 @@ class Controller_Creation extends Controller {
 		$date = new DateTime();
 	    $date->setTimezone(new DateTimeZone('Europe/Riga'));
 		$realDate = $date->format('Y-m-d H:i:sP');
+		$category = Model_Orm_Category::find(Input::post("category")+1);
 		$val = Model_Orm_Listing::validate('create');
 		$places = Model_Orm_Listing::forge(
 				array(
@@ -17,14 +18,22 @@ class Controller_Creation extends Controller {
 				    'address' =>$_POST['address'],
 				    'date' => $realDate,
 				    'user_id' => "1",
-				    'photo_id' => "1"
+				    'photo_id' => "1",
+				    'category'=> $category->category_name
 			));
 		//$places->title = $title;
 		if($places->save()) {
 			Response::redirect('listing/index');
 		}
 	}
-		return View::forge('creation/index');
+		$array = array();	
+		$categories =  Model_Orm_Category::find('all');
+	 	foreach($categories as $key=>$value) {
+			array_push($array,$value->category_name);
+		 }
+
+		$data['categories'] = $array;
+		return View::forge('creation/index',$data);
 	}
 
 }

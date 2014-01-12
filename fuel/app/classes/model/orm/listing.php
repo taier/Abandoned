@@ -13,6 +13,7 @@ class Model_Orm_Listing extends Orm\Model {
 	'date',
 	'user_id',
 	'photo_id',
+	'category'
 	);
 
 	public static function validate($factory) {

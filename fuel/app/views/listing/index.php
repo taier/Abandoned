@@ -80,16 +80,19 @@
 		</div>
 	</header>
 	<div id="main"><div class="container">
+		<?php foreach($titles as $key=>$category): ?>
 		<div class = "title">
-			<h2> <?php echo $title?> </h2>
+			<h2> <?php echo $category->category_name?> </h2>
 		</div>
 		<div class ="places">
-			 <?php foreach($places as $key=>$value): ?>
+			 <?php foreach($places as $key=>$place): 
+			  if($place->category == $category->category_name)  { ?>
 			<ul>
-				<li> <a href= <?php echo Uri::create('description/index/'.$value); ?>> <?php echo $value?> </a> </li>
+				<li> <a href= <?php echo Uri::create('description/index/'.$place->title); ?>> <?php echo $place->title?> </a> </li>
 			</ul>	
-			<?php endforeach; ?>
+			<?php  } endforeach; ?>
 		</div>
+		<?php endforeach; ?>
 	</div>
 
 	<!--<footer>
