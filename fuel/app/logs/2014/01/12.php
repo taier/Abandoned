@@ -80,3 +80,6 @@ ERROR - 2014-01-12 13:38:20 --> Runtime Recoverable error - Object of class Mode
 ERROR - 2014-01-12 13:38:28 --> Notice - Undefined variable: location in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/description/index.php on line 47
 ERROR - 2014-01-12 13:39:34 --> Notice - Undefined variable: title in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/description/index.php on line 41
 ERROR - 2014-01-12 13:40:19 --> Notice - Undefined variable: title in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/description/index.php on line 41
+ERROR - 2014-01-12 13:44:13 --> Warning - Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 8
+ERROR - 2014-01-12 13:44:24 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 9
+ERROR - 2014-01-12 13:45:42 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 9

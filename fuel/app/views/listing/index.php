@@ -88,7 +88,7 @@
 			 <?php foreach($places as $key=>$place): 
 			  if($place->category == $category->category_name)  { ?>
 			<ul>
-				<li> <a href= <?php echo Uri::create('description/index/'.$place->title); ?>> <?php echo $place->title?> </a> </li>
+				<li> <a href= <?php echo Uri::create('description/index/'.$place->id); ?>> <?php echo $place->title?> </a> </li>
 			</ul>	
 			<?php  } endforeach; ?>
 		</div>

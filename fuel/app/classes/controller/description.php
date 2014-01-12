@@ -2,11 +2,11 @@
 <?php
 class Controller_Description extends Controller {
 
-	public function action_index($title)
+	public function action_index($id)
 	{		$data = array();
 			$entry = Model_Orm_Listing::find('all');
 			foreach($entry as $key=>$value) {
-				if($value->title == $title) {
+				if($value->id == $id) {
 					$data["title"] = $value->title;
 					$data["description"]= $value->description;
 					$data["wwt"] = $value->wtt;
