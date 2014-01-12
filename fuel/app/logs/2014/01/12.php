@@ -70,3 +70,13 @@ ERROR - 2014-01-12 12:08:31 --> Fatal Error - Class 'Fuel\Migrations\DateTime' n
 ERROR - 2014-01-12 12:09:55 --> Fatal Error - Class 'Fuel\Migrations\DateTime' not found in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 31
 ERROR - 2014-01-12 12:10:14 --> Parsing Error - syntax error, unexpected ''user_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 39
 ERROR - 2014-01-12 12:10:33 --> Fatal Error - Class 'Fuel\Migrations\Model_Orm_Listing' not found in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 27
+ERROR - 2014-01-12 13:33:44 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 8
+ERROR - 2014-01-12 13:34:09 --> Error - SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.all' in 'field list' with query: "SELECT `t0`.`all` AS `t0_c0`, `t0`.`title` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `places` AS `t0`" in /Applications/MAMP/htdocs/Abandoned/fuel/core/classes/database/pdo/connection.php on line 234
+ERROR - 2014-01-12 13:34:20 --> Error - SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.all' in 'field list' with query: "SELECT `t0`.`all` AS `t0_c0`, `t0`.`title` AS `t0_c1`, `t0`.`id` AS `t0_c2` FROM `places` AS `t0`" in /Applications/MAMP/htdocs/Abandoned/fuel/core/classes/database/pdo/connection.php on line 234
+ERROR - 2014-01-12 13:35:25 --> Notice - Undefined property: Orm\Query::$title in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 8
+ERROR - 2014-01-12 13:37:47 --> Notice - Undefined variable: data in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 51
+ERROR - 2014-01-12 13:38:01 --> Notice - Undefined variable: title in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/description/index.php on line 41
+ERROR - 2014-01-12 13:38:20 --> Runtime Recoverable error - Object of class Model_Orm_Listing could not be converted to string in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 10
+ERROR - 2014-01-12 13:38:28 --> Notice - Undefined variable: location in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/description/index.php on line 47
+ERROR - 2014-01-12 13:39:34 --> Notice - Undefined variable: title in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/description/index.php on line 41
+ERROR - 2014-01-12 13:40:19 --> Notice - Undefined variable: title in /Applications/MAMP/htdocs/Abandoned/fuel/app/views/description/index.php on line 41

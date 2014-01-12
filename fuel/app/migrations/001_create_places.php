@@ -13,7 +13,7 @@ class Create_places {
 			'wtt' => array('type' => 'text'),
 			'address' => array('constraint' => 50, 'type' => 'varchar'),
 			'date' => array('type' => 'datetime'),
-			'user_id' => array('constraint' => 20, 'type' => 'int'),
+			'user_id' => array('constraint' => 20, 'tpe' => 'int'),
 			'photo_id' => array('constraint' => 255, 'type' => 'varchar'),
 			'category' => array('constraint' => 50, 'type' => 'varchar')
 
@@ -27,7 +27,7 @@ class Create_places {
 	// add data to Places
 		$places = \Model_Orm_Listing::forge(
 				array(
-				    'title' =>  "Sarkana Zvaigzne",
+				    'title' =>  "Sarkana-Zvaigzne",
 				    'description' => "Celta 1207.gadā Zobenbrāļu ordeņa mestra Venno laikā kā „castellum” tipa cietoksnis, vēlāk pārbūvēta par konventa tipa celtni. Attīstoties uguns šaujamajiem ieročiem, viduslaiku cietokšņi pamazām zaudēja savu sākotnējo nozīmi. 18. gadsimta sākumā Ziemeļu kara laikā pils tika nopostīta un vairs netika atjaunota. No 2012.gada iespējams uzkāpt Ziemeļu un galvenajā Vārtu tornī, pastaigāties pa pils mūriem un izbaudīt viduslaiku auru.
 						Krustneši, kas pakļāva un kolonizēja Baltijas jūras piekrasti, nāca galvenokārt no Svētās Romas impērijas dažādiem novadiem. Viņi sev līdzi atnesa politiskās pārvaldes veidu – feodālo sadrumstalotību. Tāpat kā vācu valstīs, arī Livonijā neizveidojās vienota valsts – tā sastāvēja no piecām nelielām valstiņām. Siguldas novads ietilpa divās no tām. Gaujas lejteces kreiso krastu jeb Siguldas zemes pārvaldīja Zobenbrāļu, vēlāk saukts - Livonijas ordenis, bet labo krastu jeb Turaidas un Krimuldas zemes – Rīgas arhibīskaps. Vācu varas nostiprināšanai Siguldā, Turaidā un Krimuldā tika uzceltas mūra pilis.
 						Zobenbrāļu ordeņa Siguldas pils ir senākā no novada pilīm. Tās celtniecība uzsākta 1207. gadā. Siguldas pils sākumā bijusi kastellas tipa – nocietināta, mūros ieslēgta pils. Ap 13. gadsimta sešdesmitajiem gadiem Livonijas ordenis Siguldas pilī veica lielus pārbūves darbus, pārveidojot to konventa tipa celtnē. Pilij bija iekšējs četrstūrains pagalms, ko no visām pusēm norobežoja pils korpusi, kuru stūros atradās torņi. Pili apjoza mūris, aiz tā atradās aizsarggrāvji. 
@@ -45,7 +45,7 @@ class Create_places {
 
 		$places = \Model_Orm_Listing::forge(
 				array(
-					'title' => "Daugavpils Sanatory",
+					'title' => "Daugavpils-Sanatory",
 					'description' =>"Senā Daugavpils atradās tagadējā Naujenes pilskalnā, kas kontrolēja tirdzniecības ceļus pa Daugavu un pakļāvās Jersikas ķēniņam, kas savukārt bija Polockas kņaza vasalis. 1209. gadā, izmantodams par ieganstu Jersikas ķēniņa Visvalža savienību ar lietuviešiem, Livonijas bīskaps Alberts kopā Zobenbrāļu ordeņa brāļiem sasauca lielu kristīto līvu un letgaļu karaspēku un iekaroja Jersikas pilsētu un ķēniņu piespieda kļūt par bīskapa Alberta vasali. Trīs daļas no Jersikas valsts, ieskaitot Naujenes pilskalnu, Visvaldis saņēma atpakaļ par lēni, kurā viņš turpināja valdīt kā suverēns karalis.
 				1224. gadā ķēniņš Visvaldis lūdza atdot Livonijas bīskapam savas atlikušās karaļvalsts pusi, ko bīskaps Alberts izlēņoja tālāk Ikšķiles bruņiniekam Konrādam. Dzimtas leģenda vēsta, ka Ikšķiles Konrāds apprecējis Visvalža meitu. 1230. gadā Jersikas Visvaldis savā zemē netālu no Daugavpils pie Līksnas upītes atļāvis nodibināt pirmo katoļu ticības sludinātāju misiju. 1239. gadā pēc ķēniņa Visvalža nāves ar Livonijas bīskapa Nikolaja atļauju Jersikas valsti ieguva Zobenbrāļu ordenis, kuram pēc līguma tajā bija jāceļ mūra pilis un tās iedzīvotāji no grieķu ortodoksās ticības jāpievērš katoļu ticībai.",
 				'wtt' => "Coffe, Camera, Notepad",
@@ -59,7 +59,7 @@ class Create_places {
 
 		$places = \Model_Orm_Listing::forge(
 				array(
-					'title' => "Valmiera Sanatory",
+					'title' => "Valmiera-Sanatory",
 					'description' =>"Senā Daugavpils atradās tagadējā Naujenes pilskalnā, kas kontrolēja tirdzniecības ceļus pa Daugavu un pakļāvās Jersikas ķēniņam, kas savukārt bija Polockas kņaza vasalis. 1209. gadā, izmantodams par ieganstu Jersikas ķēniņa Visvalža savienību ar lietuviešiem, Livonijas bīskaps Alberts kopā Zobenbrāļu ordeņa brāļiem sasauca lielu kristīto līvu un letgaļu karaspēku un iekaroja Jersikas pilsētu un ķēniņu piespieda kļūt par bīskapa Alberta vasali. Trīs daļas no Jersikas valsts, ieskaitot Naujenes pilskalnu, Visvaldis saņēma atpakaļ par lēni, kurā viņš turpināja valdīt kā suverēns karalis.
 				1224. gadā ķēniņš Visvaldis lūdza atdot Livonijas bīskapam savas atlikušās karaļvalsts pusi, ko bīskaps Alberts izlēņoja tālāk Ikšķiles bruņiniekam Konrādam. Dzimtas leģenda vēsta, ka Ikšķiles Konrāds apprecējis Visvalža meitu. 1230. gadā Jersikas Visvaldis savā zemē netālu no Daugavpils pie Līksnas upītes atļāvis nodibināt pirmo katoļu ticības sludinātāju misiju. 1239. gadā pēc ķēniņa Visvalža nāves ar Livonijas bīskapa Nikolaja atļauju Jersikas valsti ieguva Zobenbrāļu ordenis, kuram pēc līguma tajā bija jāceļ mūra pilis un tās iedzīvotāji no grieķu ortodoksās ticības jāpievērš katoļu ticībai.",
 				'wtt' => "Soul, Money",
