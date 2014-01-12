@@ -87,20 +87,14 @@ return array(
 	 */
 	'roles' => array(
 		"user" => array(
-			"event"
+			"place"
 			    =>array("create", "read", "update", "delete"),
-			"country"
-			    =>array("read"),
 			"comment"
 				=>array('create', 'read', 'update', 'delete'),
 		),
 	    "admin" => array(
-			"event"
-			    =>array("create", "read", "update","delete"),
-			"country"
-			    =>array("create", "update","delete"),
-			"location"
-			    =>array("create", "read", "update","delete"),
+			"place"
+			    =>array("create", "read", "update", "delete"),
 			"comment"
 				=>array('create', 'read', 'update', 'delete', 'update_ultimate', 'delete_ultimate'),
 				)

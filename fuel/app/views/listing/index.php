@@ -75,6 +75,15 @@
 		<div class="container">
 			<div id="logo">There's gonna be a beautiful inscription</div>
 			<h4><?php echo Html::anchor("account/logout", "Log Out"); ?></h4>
+			<?php if (Auth::has_access("place.create")) : ?>
+   			 <p>
+			<?php
+			echo Html::anchor("creation/index", "Create Place")
+			?>
+
+    </p>
+ <?php endif; ?>
+			
 		</div>
 	</header>
 	<div id="main"><div class="container">

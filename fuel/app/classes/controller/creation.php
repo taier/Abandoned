@@ -4,6 +4,9 @@ class Controller_Creation extends Controller {
 
 	public function action_index()
 	{
+		if ( !Auth::has_access('place.create') ) {
+		 Response::redirect("listing/index");
+		}
 		if (Input::method() == 'POST') {
 		$date = new DateTime();
 	    $date->setTimezone(new DateTimeZone('Europe/Riga'));
