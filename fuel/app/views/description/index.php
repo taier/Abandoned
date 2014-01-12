@@ -28,9 +28,6 @@
 	</style>
 </head>
 <body>
-
-
-<!-- LOOK HERE!  -->
 	<header>
 		<div class="container">
 			<div id="logo"></div>
@@ -53,6 +50,5 @@
 		</div>
 
 	</div>
-<!-- END OF LOOK HERE!  -->	
 </body>
 </html>

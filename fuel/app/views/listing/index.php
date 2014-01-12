@@ -71,9 +71,6 @@
 	</style>
 </head>
 <body>
-
-
-<!-- LOOK HERE!  -->
 	<header>
 		<div class="container">
 			<div id="logo">There's gonna be a beautiful inscription</div>
@@ -95,12 +92,11 @@
 		<?php endforeach; ?>
 	</div>
 
-	<!--<footer>
+	<footer>
         <p>&copy; University of Latvia, 2014.</p>
         <p>Helen Shorohova, js11265</p>
         <p>Dana Orbitane, do12022</p>
-    </footer>-->
+    </footer>
     </div>
-<!-- END OF LOOK HERE!  -->	
 </body>
 </html>

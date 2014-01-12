@@ -71,9 +71,6 @@
 	</style>
 </head>
 <body>
-
-
-<!-- LOOK HERE!  -->
 	<header>
 		<div class="container">
 			<div id="logo">There's gonna be a beautiful inscription</div>
@@ -124,7 +121,5 @@
         <p>Helen Shorohova, js11265</p>
         <p>Dana Orbitane, do12022</p>
     </footer>
-    </div>
-<!-- END OF LOOK HERE!  -->	
 </body>
 </html>
