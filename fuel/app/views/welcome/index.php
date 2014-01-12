@@ -81,10 +81,10 @@
 			<h1>Welcome to Abandoned!</h1>
 			<?php echo Html::anchor("account/simpleauth", "Please Log In"); ?>
 			<h4>Or </h4>
-			<a href="http://abandoned.com/account/create"> Create New Account </a>
+			<?php echo Html::anchor("account/create", "Register"); ?>
 
 			<h4>Or Enter as </h4>
-			<a href="http://abandoned.com/listing/index"> Guest </a>
+			<?php echo Html::anchor("listing/index", "Guest"); ?>
 		</div>	
 			
 	</div>

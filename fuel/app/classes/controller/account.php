@@ -129,7 +129,7 @@ class Controller_Account extends Controller_Public {
     public function action_logout() {
 	$auth = Auth::instance();
 	$auth->logout();
-	Response::redirect("http://abandoned.com/");
+	Response::redirect("welcome/index");
     }
 
     /**
