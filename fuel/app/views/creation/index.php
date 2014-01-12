@@ -84,15 +84,30 @@
 			<h2> Creation Page </h2>
 		</div>
 		<div class="input">
+			<label> Title </label>
 		<?php echo Form::open();
-		 echo Form::label('Title of Place', 'title'); 
 	     echo Form::input('title', 
-			Input::post('title')); ?>
-		</br> </br>
-		 <?php echo Form::label('Description of Place', 'description'); 
+			Input::post('title', 
+			    isset($title) ? $place->title : '')); ?>
+		 </br><label> Description </label> </br>
+		<?php
 	     echo Form::textarea('description', 
-			Input::post('description')); ?>
+			Input::post('description', 
+			    isset($description) ? $place->description : '')); ?>
+
+		 </br><label> What to take</label> </br>
+		<?php
+	     echo Form::input('wtt', 
+			Input::post('wtt', 
+			    isset($wtt) ? $place->wtt : '')); ?>
+
+		</br><label> Address</label> </br>
+		<?php
+	     echo Form::input('address', 
+			Input::post('address', 
+			    isset($address) ? $place->address : '')); ?>
 		</div>
+		</br>
 		<div class="actions">
     <?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-default')); ?>
 		</div>
