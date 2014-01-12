@@ -79,7 +79,7 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Welcome to Abandoned!</h1>
-			<a href="http://abandoned.com/account/simpleauth"> Please Log In </a>
+			<?php echo Html::anchor("account/simpleauth", "Please Log In"); ?>
 			<h4>Or </h4>
 			<a href="http://abandoned.com/account/create"> Create New Account </a>
 
