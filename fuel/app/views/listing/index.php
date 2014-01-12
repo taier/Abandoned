@@ -74,6 +74,7 @@
 	<header>
 		<div class="container">
 			<div id="logo">There's gonna be a beautiful inscription</div>
+			<h4><?php echo Html::anchor("account/logout", "Log Out"); ?></h4>
 		</div>
 	</header>
 	<div id="main"><div class="container">

@@ -46,7 +46,7 @@ class Controller_Account extends Controller_Public {
 			array("verified" => false,
 			      "verification_key" => $verification_key)
 			);
-	//	Session::set_flash("success", "Registration successful!\nYou still have to verify your e-mail address.");
+			Response::redirect('listing/index');
 		$this->action_send_verification_email($newid, Input::post("usermail"), $verification_key);
 		//nothing else to do here
 		Response::redirect("/");
@@ -107,6 +107,7 @@ class Controller_Account extends Controller_Public {
 	    // you have used the table definition and configuration as mentioned above.
 	    if ($auth->login()) {
 		if ($auth->get_profile_fields("verified", false) == false) {
+			 Response::redirect('listing/index');
 		   // Session::set_flash("error", "You have not verified your e-mail address yet!");
 		} else {
 		    // credentials ok, go right in
@@ -128,7 +129,7 @@ class Controller_Account extends Controller_Public {
     public function action_logout() {
 	$auth = Auth::instance();
 	$auth->logout();
-	Response::redirect("/");
+	Response::redirect("http://abandoned.com/");
     }
 
     /**
