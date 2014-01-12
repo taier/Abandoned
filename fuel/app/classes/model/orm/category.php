@@ -8,4 +8,9 @@ class Model_Orm_Category extends Orm\Model {
     'id',
 	'category_name'
 	);
+
+	public static function validate($factory) {
+	$val = Validation::forge($factory);
+	return $val;
+    }
 }

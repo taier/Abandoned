@@ -65,3 +65,8 @@ ERROR - 2014-01-12 12:29:45 --> Notice - Undefined index: category in /Applicati
 ERROR - 2014-01-12 12:36:58 --> Parsing Error - syntax error, unexpected ';' in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/creation.php on line 22
 ERROR - 2014-01-12 12:41:39 --> Error - SQLSTATE[42S22]: Column not found: 1054 Unknown column 't0.id' in 'field list' with query: "SELECT `t0`.`id` AS `t0_c0`, `t0`.`category_name` AS `t0_c1` FROM `categories` AS `t0`" in /Applications/MAMP/htdocs/Abandoned/fuel/core/classes/database/pdo/connection.php on line 234
 ERROR - 2014-01-12 12:48:23 --> Parsing Error - syntax error, unexpected ';', expecting ')' in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/creation.php on line 22
+ERROR - 2014-01-12 12:08:05 --> Parsing Error - syntax error, unexpected '}' in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 51
+ERROR - 2014-01-12 12:08:31 --> Fatal Error - Class 'Fuel\Migrations\DateTime' not found in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 29
+ERROR - 2014-01-12 12:09:55 --> Fatal Error - Class 'Fuel\Migrations\DateTime' not found in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 31
+ERROR - 2014-01-12 12:10:14 --> Parsing Error - syntax error, unexpected ''user_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 39
+ERROR - 2014-01-12 12:10:33 --> Fatal Error - Class 'Fuel\Migrations\Model_Orm_Listing' not found in /Applications/MAMP/htdocs/Abandoned/fuel/app/migrations/001_create_places.php on line 27
