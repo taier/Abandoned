@@ -24,6 +24,31 @@ class Create_places {
 			'category_name' => array('constraint' => 70, 'type' => 'varchar'),
 			), array('id'));
 
+
+	\DBUtil::create_table('users', array(
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true),
+			'username' => array('constraint' => 50, 'type' => 'varchar'),
+			'password' => array('constraint' => 255, 'type' => 'varchar'),
+			'group' => array('constraint' => 11, 'type' => 'int'),
+			'email' => array('constraint' => 255, 'type' => 'varchar'),
+			'last_login' => array('constraint' => 25, 'type' => 'varchar'),
+			'login_hash' => array('constraint' => 255, 'type' => 'varchar'),
+			'profile_fields' => array('type' => 'text'),
+			'created_at' => array('constraint' => 11, 'type' => 'int')
+		), array('id'));
+
+//we also need some users. at least two.
+
+	    \Auth::instance()->create_user(
+			"admin@abandoned.com", //username = email
+			"abanddoned_admin",
+			"admin@abandoned.com",
+			100, //admin
+			array("verified" => true,
+			      "verification_key" => md5(mt_rand(0, mt_getrandmax())))
+			);
+	    
+
 	// add data to Places
 		$places = \Model_Orm_Listing::forge(
 				array(

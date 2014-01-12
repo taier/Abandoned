@@ -83,3 +83,5 @@ ERROR - 2014-01-12 13:40:19 --> Notice - Undefined variable: title in /Applicati
 ERROR - 2014-01-12 13:44:13 --> Warning - Invalid argument supplied for foreach() in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 8
 ERROR - 2014-01-12 13:44:24 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 9
 ERROR - 2014-01-12 13:45:42 --> Notice - Trying to get property of non-object in /Applications/MAMP/htdocs/Abandoned/fuel/app/classes/controller/description.php on line 9
+ERROR - 2014-01-12 15:41:23 --> Compile Error - Cannot redeclare class Auth\AuthException in /Applications/MAMP/htdocs/Abandoned/fuel/app/config/auth.php on line 18
+ERROR - 2014-01-12 15:46:29 --> Parsing Error - syntax error, unexpected ';', expecting ')' in /Applications/MAMP/htdocs/Abandoned/fuel/app/config/simpleauth.php on line 122
