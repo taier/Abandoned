@@ -6,6 +6,14 @@ class Create_places {
 
 	function up()
 	{
+		\DBUtil::create_table('comments', array(
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true),
+			'comment' => array('type' => 'text'),
+			'places_id' => array('constraint' => 11, 'type' => 'int'),
+			'user_id' => array('constraint' => 11, 'type' => 'int'),
+			'created' => array('type' => 'datetime')
+		), array('id'));
+
 		\DBUtil::create_table('places', array(
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true),
 			'title' => array('constraint' => 50, 'type' => 'varchar'),
@@ -22,6 +30,7 @@ class Create_places {
 	\DBUtil::create_table('categories', array(
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true),
 			'category_name' => array('constraint' => 70, 'type' => 'varchar'),
+			'photo_url' => array('constraint' => 255, 'type' => 'varchar')
 			), array('id'));
 
 
@@ -41,9 +50,18 @@ class Create_places {
 
 	    \Auth::instance()->create_user(
 			"admin@abandoned.com", //username = email
-			"abanddoned_admin",
+			"abandoned_admin",
 			"admin@abandoned.com",
 			100, //admin
+			array("verified" => true,
+			      "verification_key" => md5(mt_rand(0, mt_getrandmax())))
+			);
+
+	     \Auth::instance()->create_user(
+			"guest@abandoned.com", //username = email
+			"guest",
+			"guest@abandoned.com",
+			0, //admin
 			array("verified" => true,
 			      "verification_key" => md5(mt_rand(0, mt_getrandmax())))
 			);
@@ -99,12 +117,14 @@ class Create_places {
 // add data to Category
 	$category = \Model_Orm_Category::forge(
 				array(
-				'category_name' =>'Castle'));
+				'category_name' =>'Castle',
+				'photo_url' => 'http://listsalad.com/wp-content/uploads/2011/03/SALADcastle.jpg'));
 	$category->save();
 
 	$category = \Model_Orm_Category::forge(
 				array(
-				'category_name' =>'Hospital'));
+				'category_name' =>'Hospital',
+				'photo_url' => 'http://2.bp.blogspot.com/-FmskUuFjKdI/TlkbUpd_xcI/AAAAAAAAACk/ewDw6NO5-Eo/s1600/Beelitz%2BHeilst%2525C3%2525A4tten%2Blimo320%2Babandoned%2Bhospital%2Bgermany.jpg'));
 	$category->save();
 
 	}
@@ -113,5 +133,7 @@ class Create_places {
 	{
 		\DBUtil::drop_table('places');
 		\DBUtil::drop_table('categories');
+		\DBUtil::drop_table('comments');
+		\DBUtil::drop_table('users');
 	}
 }

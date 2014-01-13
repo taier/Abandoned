@@ -309,7 +309,7 @@ return array(
 		 * add it like 'validation' => 'forms'.
 		 * If you don't want the lang in a group use null as groupname.
 		 */
-		// 'language'  => array(),
+		 'language'  => array(),
 	 ),
 
 );

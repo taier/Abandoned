@@ -17,7 +17,7 @@ class Model_Orm_User extends Orm\Model {
 	protected static $_has_many = array(
 		'comments' => array(
 			'key_from' => 'id',
-			'model_to' => 'Model_Orm_Comment',
+			'model_to' => 'Model_Orm_Commentss',
 			'key_to' => 'user_id',
 			'cascade_save' => true,
 			'cascade_delete' => false

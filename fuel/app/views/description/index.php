@@ -97,32 +97,27 @@
 				<p> <?php echo $description?> </p>
 				<center><img src =<?php echo $photo_URL ?> alt = "Cool image"> </center>
 			</div>
-			<!--<//?php foreach ($places->comments as $comment) : ?>
-	        <li>
-				<div>
-					<span style="font-style: italic;"><//?php echo __("ACTION_VIEW_USER_LABEL")?>: </span><//?php echo $comment->user->username; ?><br>
-					<span style="font-style: italic;"><//?php echo __("ACTION_VIEW_COMMENT_CREATED")?>: </span><//?php echo $comment->created ?><br>
-	                                <span style="font-weight: bold;"><//?php echo __("ACTION_VIEW_COMMENT_TEXT")?>: </span><//?php echo $comment->comment; ?>
-				</div>
-			<//?php if ($comment->canEdit()) : 
-			echo " " . Html::anchor("comment/edit/" . $comment->id, 
-					    "<i class='icon-edit'></i>");
-			endif; 
-			if ($comment->canDelete()) : 
-		    echo " " . Html::anchor("comment/delete/" . $comment->id, 
-					    "<i class='icon-remove'></i>", 
-					    array("onclick" => "return confirm('Do you want to delete this agenda item?');"));
-			endif;
-		    ?></li>
-			<?php
-		    //endforeach;  //foreach agenda item
-		    ?>
-				<//?php if ($canAddComments) : ?>
-		    <li><//?php  echo Html::anchor('comment/create/' . $places->id,
-				    '<i class="icon-plus-sign"></i> '.__('ACTION_VIEW_ADD_COMMENT'));
-		    ?>
-		    </li>
-			<?php //endif; ?>-->
+			<?php foreach ($comments as $comment) :
+			 if($comment->places_id == $place_id)  { ?>
+			<ul>
+				<li><?php echo $comment->comment ?> </li>
+				<?php if($comment->user_id == $user_id && $user_id != 0) {
+					    echo Html::anchor('comments/edit/'.$comment->id, 'Edit   '); 
+					    echo Html::anchor('comments/delete/'.$comment->id, 'Delete'); 
+				} ?>
+			</ul>	
+			<?php  } endforeach; ?>
+
+
+			 </br><label> Add New Comment </label> </br>
+		<?php
+		 echo Form::open();
+	     echo Form::textarea('new_comment', 
+			Input::post('new_comment', 
+			    isset($new_comment) ? $new_comment : '')); ?>
+			</br>
+	     <?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-default')); ?>
+		<?php echo Form::close() ?>
 		</article>
 		<footer>
         <p>&copy; University of Latvia, 2014.</p>

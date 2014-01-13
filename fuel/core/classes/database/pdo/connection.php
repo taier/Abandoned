@@ -231,7 +231,7 @@ class Database_PDO_Connection extends \Database_Connection
 
 						// and convert the exception in a database exception
 						$error_code = is_numeric($e->getCode()) ? $e->getCode() : 0;
-						//throw new \Database_Exception($e->getMessage().' with query: "'.$sql.'"', $error_code, $e);
+						throw new \Database_Exception($e->getMessage().' with query: "'.$sql.'"', $error_code, $e);
 					}
 				}
 
@@ -240,7 +240,7 @@ class Database_PDO_Connection extends \Database_Connection
 				{
 					// and convert the exception in a database exception
 					$error_code = is_numeric($e->getCode()) ? $e->getCode() : 0;
-					//throw new \Database_Exception($e->getMessage().' with query: "'.$sql.'"', $error_code, $e);
+					throw new \Database_Exception($e->getMessage().' with query: "'.$sql.'"', $error_code, $e);
 				}
 			}
 		}
@@ -285,7 +285,7 @@ class Database_PDO_Connection extends \Database_Connection
 		else
 		{
 			// Return the number of rows affected
-			//return $result->errorCode() === '00000' ? $result->rowCount() : -1;
+			return $result->errorCode() === '00000' ? $result->rowCount() : -1;
 		}
 	}
 
