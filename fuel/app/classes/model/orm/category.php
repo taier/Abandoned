@@ -6,7 +6,8 @@ class Model_Orm_Category extends Orm\Model {
     protected static $_primary_key = array('id');
     protected static $_properties = array(
     'id',
-	'category_name'
+	'category_name',
+	'photo_url'
 	);
 
 	public static function validate($factory) {

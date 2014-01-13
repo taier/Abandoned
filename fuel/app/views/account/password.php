@@ -2,7 +2,6 @@
 echo Form::open();
 echo Form::fieldset_open(null, "User data");
 ?>
-
 <label for="username">User name</label>
 <input type="text" name="username" id="username" />
 <label for="password">Password</label>

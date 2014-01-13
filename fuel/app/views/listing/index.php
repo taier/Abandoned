@@ -3,15 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Listing page</title>
-	<?php echo Asset::css('bootstrap.css'); ?>
+	<!--<//?php echo Asset::css('bootstrap.css'); ?>-->
 	<style>
-		#logo{
-			display: block;
-			width: 179px;
-			height: 100px;
-			position: relative;
-			top: 15px;
-		}
 		body{
 			background-image:url("http://static.tumblr.com/aadb9f0b1df7e1f6282445638a14d628/zaamq6j/7hYmrh0dg/tumblr_static_grey-sea.jpg");
 		    background-attachment:fixed;
@@ -24,23 +17,37 @@
 		    font-size:14px;
 		}
 		#main{
-		     width:1000px;
-		     margin:auto;
-		     box-shadow: 0px 0px 20px black;
-		     background-color: #A9A9A9;
-		 }
-		
+		    width:1000px;
+		    margin:auto;
+		    box-shadow: 0px 0px 20px black;
+		    background-color: #A9A9A9;
+		}
+		article {
+		    background-color:#A9A9A9;
+		    padding:15px;
+		}
 		h1{
-		    font-size: 18px;
+		    font-size: 20px;
 		    font-weight: bold;
-		    color:#000000;
+		    color:#ffffff;
 		    margin-left: 10px;
 		}
 		h2{
+		    text-align: center;
+		    font-size: 18px;
+		    font-weight: bold;
+		    color:#000000;
+		    margin-left: 20px; 
+		}
+		h3{
 		    font-size: 16px;
 		    font-weight: bold;
 		    color:#000000;
 		    margin-left: 20px; 
+		}
+		h4{
+			text-align: right;
+			margin-right: 10px;
 		}
 		a{
 			color:#000000;
@@ -71,42 +78,37 @@
 	</style>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div id="logo">There's gonna be a beautiful inscription</div>
+	<section id="main">
+		<header>
+			<div id="logo"><img src="http://i39.tinypic.com/2ml0ed.png"></div>
 			<h4><?php echo Html::anchor("account/logout", "Log Out"); ?></h4>
 			<?php if (Auth::has_access("place.create")) : ?>
-   			 <p>
-			<?php
-			echo Html::anchor("creation/index", "Create Place")
-			?>
-
-    </p>
- <?php endif; ?>
-			
-		</div>
-	</header>
-	<div id="main"><div class="container">
+   			<h4><?php echo Html::anchor("creation/index", "Create Place") ?> </h4>
+ 			<?php endif; ?>
+		</header>
+	<article>
 		<?php foreach($titles as $key=>$category): ?>
 		<div class = "title">
 			<h2> <?php echo $category->category_name?> </h2>
+			<center><img src =<?php echo $category->photo_url ?> alt = "Cool image"></center>
 		</div>
 		<div class ="places">
-			 <?php foreach($places as $key=>$place): 
+			<h3>List of <?php echo $category->category_name ?>s</h3>
+			<?php foreach($places as $key=>$place): 
 			  if($place->category == $category->category_name)  { ?>
 			<ul>
-				<li> <a href= <?php echo Uri::create('description/index/'.$place->id); ?>> <?php echo $place->title?> </a> </li>
+				<li> <a href= <?php echo Uri::create('description/index/'.$place->id); ?>> <?php echo $place->title?></a> </li>
 			</ul>	
 			<?php  } endforeach; ?>
 		</div>
 		<?php endforeach; ?>
-	</div>
 
+	</article>
 	<footer>
         <p>&copy; University of Latvia, 2014.</p>
         <p>Helen Shorohova, js11265</p>
         <p>Dana Orbitane, do12022</p>
     </footer>
-    </div>
+    </section>
 </body>
 </html>

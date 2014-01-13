@@ -1,6 +1,6 @@
 <?php
 
-use Social\Facebook;
+//use Social\Facebook;
 
 /**
  * Different ways of authentication
@@ -37,17 +37,17 @@ class Controller_Account extends Controller_Public {
 
 	    if ($is_err == false) {
 		//no errors - we can register!
-		$verification_key = md5(mt_rand(0, mt_getrandmax()));
+		//$verification_key = md5(mt_rand(0, mt_getrandmax()));
 		$newid = Auth::instance()->create_user(
 			Input::post("usermail"), //username = email
 			Input::post("password"),
 			Input::post("usermail"),
-			1, //simple user
-			array("verified" => false,
-			      "verification_key" => $verification_key)
+			1 //simple user
+			//array("verified" => false,
+			//      "verification_key" => $verification_key)
 			);
 			Response::redirect('listing/index');
-		$this->action_send_verification_email($newid, Input::post("usermail"), $verification_key);
+		//$this->action_send_verification_email($newid, Input::post("usermail"), $verification_key);
 		//nothing else to do here
 		Response::redirect("/");
 	    }
@@ -56,7 +56,7 @@ class Controller_Account extends Controller_Public {
 	$this->template->content = View::forge("account/create");
     }
 
-    public function action_send_verification_email($id, $mailaddress, $key) {
+    //public function action_send_verification_email($id, $mailaddress, $key) {
 
 	// $email = Email::forge();
 	// $email->from('admin@eventual.org', 'Eventual system');
@@ -69,9 +69,9 @@ class Controller_Account extends Controller_Public {
 	// 	Uri::create("account/verify/" . $id . "/" . $key . "/");
 	// $email->body($mail_text);
 	// $email->send();
-    }
+    //}
 
-    public function action_verify($userid, $key) {
+    /*public function action_verify($userid, $key) {
 	$auth = Auth::instance();
 
 	if ($auth->force_login($userid)) {
@@ -89,7 +89,7 @@ class Controller_Account extends Controller_Public {
 	    Session::set_flash("errror", "Could not log you in!");
 	}
 	Response::redirect("/");
-    }
+    }*/
 
     /**
      * Logging in with username and password.
@@ -135,7 +135,7 @@ class Controller_Account extends Controller_Public {
     /**
      * Authenticates the user using Facebook.
      */
-    public function action_fb() {
+    /*public function action_fb() {
 	
 	$fb = Facebook::instance();
 
@@ -182,7 +182,7 @@ class Controller_Account extends Controller_Public {
 	    $auth->force_login($user_id);
 	    Response::redirect("/");
 	}
-    }
+    }*/
 
     /**
      * Demonstrates how HTTP basic authentication can be used
@@ -191,7 +191,7 @@ class Controller_Account extends Controller_Public {
     public function action_basic() {
 	if (Input::server("PHP_AUTH_USER", null) == null) {
 	    $response = new Response();
-	    $response->set_header('WWW-Authenticate', 'Basic realm="Authenticate for eventual.org"');
+	    $response->set_header('WWW-Authenticate', 'Basic realm="Authenticate for abandoned.com"');
 	    return $response;
 	} else {
 	    $response = Response::forge("You are authenticated as " . Input::server("PHP_AUTH_USER"));

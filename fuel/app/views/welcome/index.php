@@ -23,24 +23,11 @@
 		    font-family:Georgia, serif;
 		    font-size:14px;
 		}
-		#main{
-		     width:1000px;
-		     margin:auto;
-		     box-shadow: 0px 0px 20px black;
-		     background-color: #A9A9A9;
-		 }
-		
 		h1{
 		    font-size: 18px;
 		    font-weight: bold;
 		    color:#000000;
 		    margin-left: 10px;
-		}
-		h2{
-		    font-size: 16px;
-		    font-weight: bold;
-		    color:#000000;
-		    margin-left: 20px; 
 		}
 		a{
 			color:#000000;
@@ -53,20 +40,6 @@
 		}
 		p{
 		    text-indent:10px;
-		}
-		footer {
-		    width:1000px;
-		    background-color:#c0c0c0;
-		    text-align:center;
-		    font-size:12px;
-		    font-family: Arial;
-		    border-top:3px solid #555;
-		    border-top-style:double;
-		    margin: auto;
-		}
-		footer p{
-		    margin: 0;
-		    padding: 5px 0px 5px 0px;
 		}
 	</style>
 </head>

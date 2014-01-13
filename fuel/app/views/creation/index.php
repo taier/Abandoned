@@ -5,13 +5,6 @@
 	<title>Listing page</title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<style>
-		#logo{
-			display: block;
-			width: 179px;
-			height: 100px;
-			position: relative;
-			top: 15px;
-		}
 		body{
 			background-image:url("http://static.tumblr.com/aadb9f0b1df7e1f6282445638a14d628/zaamq6j/7hYmrh0dg/tumblr_static_grey-sea.jpg");
 		    background-attachment:fixed;
@@ -24,23 +17,37 @@
 		    font-size:14px;
 		}
 		#main{
-		     width:1000px;
-		     margin:auto;
-		     box-shadow: 0px 0px 20px black;
-		     background-color: #A9A9A9;
-		 }
-		
+		    width:1000px;
+		    margin:auto;
+		    box-shadow: 0px 0px 20px black;
+		    background-color: #A9A9A9;
+		}
+		article {
+		    background-color:#A9A9A9;
+		    padding:15px;
+		}
 		h1{
-		    font-size: 18px;
+		    font-size: 20px;
 		    font-weight: bold;
-		    color:#000000;
+		    color:#ffffff;
 		    margin-left: 10px;
 		}
 		h2{
+		    text-align: center;
+		    font-size: 18px;
+		    font-weight: bold;
+		    color:#000000;
+		    margin-left: 20px; 
+		}
+		h3{
 		    font-size: 16px;
 		    font-weight: bold;
 		    color:#000000;
 		    margin-left: 20px; 
+		}
+		h4{
+			text-align: right;
+			margin-right: 10px;
 		}
 		a{
 			color:#000000;
@@ -53,6 +60,12 @@
 		}
 		p{
 		    text-indent:10px;
+		}
+		div.input{
+			margin-left: 10px;
+		}
+		label{
+			margin: 5px 0px 5px 0px;
 		}
 		footer {
 		    width:1000px;
@@ -71,12 +84,11 @@
 	</style>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div id="logo">There's gonna be a beautiful inscription</div>
-		</div>
-	</header>
-	<div id="main"><div class="container">
+	<section id="main">
+		<header>
+				<div id="logo"><img src="http://i39.tinypic.com/2ml0ed.png"></div>
+		</header>
+		<article>
 		<div class = "title">
 			<h2> Creation Page </h2>
 		</div>
@@ -114,14 +126,14 @@
 	     echo Form::input('photo_URL', 
 			Input::post('photo_URL', 
 			    isset($photo_URL) ? $place->photo_URL : '')); ?>
-
 		</br></br>
 		<div class="actions">
     <?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-default')); ?>
 		</div>
+	</br>
 	<?php echo Form::close() ?>
-	</div>
-
+	</article>
+	</section>
 	<footer>
         <p>&copy; University of Latvia, 2014.</p>
         <p>Helen Shorohova, js11265</p>
