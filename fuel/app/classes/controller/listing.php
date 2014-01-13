@@ -18,7 +18,12 @@ class Controller_Listing extends Controller_Public {
 				array_push($coolArray, $comment->comment);
 				}
 			}
+		if(count($coolArray) == 0) {
+			$data['comment'] ="You have never commented yet";
+		} else {
+
 		$data['comment'] = $coolArray[rand(0,count($coolArray)-1)];
+			}
 
 		} else {
 			$data['comment'] = "Empty";
