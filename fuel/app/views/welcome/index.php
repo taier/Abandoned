@@ -12,6 +12,9 @@
 			position: relative;
 			top: 15px;
 		}
+		#setlang{
+			text-align: right;
+		}
 		body{
 			background-image:url("http://static.tumblr.com/aadb9f0b1df7e1f6282445638a14d628/zaamq6j/7hYmrh0dg/tumblr_static_grey-sea.jpg");
 		    background-attachment:fixed;
@@ -47,17 +50,24 @@
 	<header>
 		<div class="container">
 			<div id="logo"></div>
+			<div id="setlang">
+			<?php
+		    echo Html::anchor("account/setlang/lv", "LV");
+		    echo " | ";
+		    echo Html::anchor("account/setlang/en", "EN");
+			?>
+	    </div>
 		</div>
 	</header>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Welcome to Abandoned!</h1>
-			<?php echo Html::anchor("account/simpleauth", "Please Log In"); ?>
-			<h4>Or </h4>
-			<?php echo Html::anchor("account/create", "Register"); ?>
+			<h1><?php echo __("WELCOME")?></h1>
+			<?php echo Html::anchor("account/simpleauth", __("LOG_IN")); ?>
+			<h4><?php echo __("OR")?> </h4>
+			<?php echo Html::anchor("account/create", __("REGISTER")); ?>
 
-			<h4>Or Enter as </h4>
-			<?php echo Html::anchor("listing/index", "Guest"); ?>
+			<h4><?php echo __("ENTER_AS")?> </h4>
+			<?php echo Html::anchor("listing/index", __("GUEST")); ?>
 		</div>	
 			
 	</div>

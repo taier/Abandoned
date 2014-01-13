@@ -1,6 +1,6 @@
 <?php
 
-class Controller_Comment extends Controller {
+class Controller_Comment extends Controller_Public {
 
     public function before() {
         parent::before();

@@ -19,7 +19,7 @@
  * @package  app
  * @extends  Controller
  */
-class Controller_Welcome extends Controller
+class Controller_Welcome extends Controller_Public
 {
 
 	/**
@@ -28,6 +28,14 @@ class Controller_Welcome extends Controller
 	 * @access  public
 	 * @return  Response
 	 */
+	public function before() {
+        parent::before();
+        $this->_auth = Auth::instance();
+		$userids = $this->_auth->get_user_id();
+		$this->_user_id = $userids[1];
+        //loads messages for comment controller
+		Lang::load("welcome");
+    }
 	public function action_index()
 	{
 		return Response::forge(View::forge('welcome/index'));

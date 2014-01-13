@@ -1,6 +1,6 @@
 
 <?php
-class Controller_Description extends Controller {
+class Controller_Description extends Controller_Public {
 
 	public function action_index($id)
 	{		$data = array();
@@ -14,11 +14,11 @@ class Controller_Description extends Controller {
 					$data["photo_URL"] =$value->photo_URL;
 				}
 		 }
-		/*$places = Model_Orm_Listing::find($id, array("related" => array('comments')));
+		$places = Model_Orm_Listing::find($id, array("related" => array('comments')));
 		$canAddComments = Auth::has_access('comment.create');
 		$places_view = View::forge('description/index', $data);
 		$places_view->set("places", $places);
-		$places_view->set("canAddComments", $canAddComments);*/
+		$places_view->set("canAddComments", $canAddComments);
 		//$this->template->title = __("ACTION_VIEW_TITLE");
 		//$this->template->page_content = $places_view;
 		return View::forge('description/index', $data);
