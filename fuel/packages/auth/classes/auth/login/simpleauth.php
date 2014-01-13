@@ -357,7 +357,7 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 			$update['profile_fields'] = serialize($profile_fields);
 		}
 
-		$update['updated_at'] = \Date::forge()->get_timestamp();
+		//$update['updated_at'] = \Date::forge()->get_timestamp();
 
 		$affected_rows = \DB::update(\Config::get('simpleauth.table_name'))
 			->set($update)
