@@ -6,14 +6,25 @@ class Controller_Listing extends Controller_Public {
 	{
 		$data["titles"] = Model_Orm_Category::find('all');
 		$data["places"] = Model_Orm_Listing::find('all');
-		//$articles = Model_Orm_Category::factory('categories')->find_all();
-		//$random = array();
-		//list(,$user_id) = Auth::get_user_id();
-		//is_null($user_id) and Response::redirect("listing/index");
-		/*foreach($places_user as $key=>$value) {
-				if($value->user_id == $user_id) {
-					$random = array_push($value->title);
-				}*/
+		$comments = Model_Orm_Comments::find('all');
+		list(,$user_id) = Auth::get_user_id();
+		$data["user_id"] = $user_id;
+
+		if($user_id != 0) {
+
+		$coolArray = array();
+		foreach ($comments as $comment) {
+			if($comment->user_id == $user_id && $user_id != 0) {
+				array_push($coolArray, $comment->comment);
+				}
+			}
+		$data['comment'] = $coolArray[rand(0,count($coolArray)-1)];
+
+		} else {
+			$data['comment'] = "Empty";
+
+
+		}
 		return View::forge('listing/index', $data);
 	}
 

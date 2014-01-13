@@ -102,8 +102,15 @@
 			<?php  } endforeach; ?>
 		</div>
 		<?php endforeach; ?>
+		<?php if($user_id != 0) { ?>
+		<h2> Your Random Comment </h2>
+		<?php echo $comment ?>
+			<?php } ?>
 
 	</article>
+
+
+
 	<footer>
         <p>&copy; University of Latvia, 2014.</p>
         <p>Helen Shorohova, js11265</p>
