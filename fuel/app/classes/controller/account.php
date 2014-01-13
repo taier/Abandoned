@@ -111,7 +111,7 @@ class Controller_Account extends Controller_Public {
 		   // Session::set_flash("error", "You have not verified your e-mail address yet!");
 		} else {
 		    // credentials ok, go right in
-		    Response::redirect('/') and die();
+		     Response::redirect('listing/index');
 		}
 	    } else {
 		// Oops, no soup for you. try to login again. Set some values to
