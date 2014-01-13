@@ -118,6 +118,7 @@
 			</br>
 	     <?php echo Form::submit('submit', 'Save', array('class' => 'btn btn-default')); ?>
 		<?php echo Form::close() ?>
+		<h4><?php echo Html::anchor("listing/index", "Return"); ?></h4>
 		</article>
 		<footer>
         <p>&copy; University of Latvia, 2014.</p>
