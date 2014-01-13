@@ -46,10 +46,10 @@ class Controller_Account extends Controller_Public {
 			//array("verified" => false,
 			//      "verification_key" => $verification_key)
 			);
-			Response::redirect('listing/index');
+			Response::redirect('welcome/index');
 		//$this->action_send_verification_email($newid, Input::post("usermail"), $verification_key);
 		//nothing else to do here
-		Response::redirect("/");
+		//Response::redirect("/");
 	    }
 	}
 	$this->template->page_title = "Become a member";
