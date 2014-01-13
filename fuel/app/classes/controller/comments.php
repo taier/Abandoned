@@ -50,7 +50,11 @@ class Controller_Comments extends Controller_Public {
 
 		list(,$user_id) = Auth::get_user_id();
 		$comment = Model_Orm_Comments::find($id);
-		if($comment->user_id != $user_id && $user_id != 0) {
+		$user = Model_Orm_User::find($user_id);
+
+		if($user->group == 100) {
+
+		} else if ($comment->user_id != $user_id && $user_id != 0) {
 			 Response::redirect('description/index/'.$comment->places_id);
 		}
 		
@@ -78,7 +82,10 @@ class Controller_Comments extends Controller_Public {
       public function action_delete($id) {
 			list(,$user_id) = Auth::get_user_id();
 			$comment = Model_Orm_Comments::find($id);
-			if($comment->user_id != $user_id && $user_id != 0) {
+			$user = Model_Orm_User::find($user_id);
+			if($user->group == 100) {
+
+			} else if($comment->user_id != $user_id && $user_id != 0) {
 				 Response::redirect('description/index/'.$comment->places_id);
 			}
 			 $comment->delete();

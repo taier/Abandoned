@@ -5,6 +5,7 @@ class Controller_Description extends Controller_Public {
 	public function action_index($id)
 	{		
 		list(,$user_id) = Auth::get_user_id();
+		$user = Model_Orm_User::find($user_id);
 		if (Input::method() == 'POST') {
 
 			$date = new DateTime();
@@ -35,6 +36,11 @@ class Controller_Description extends Controller_Public {
 					$data["photo_URL"] = $value->photo_URL;
 					$data["place_id"] = $value->id;
 					$data["user_id"] = $user_id;
+					if($user) {
+						$data["user_role"] = $user->group;
+					} else {
+						$data["user_role"] = 0;
+					}
 				}
 		 }
 		$data["comments"] = Model_Orm_Comments::find('all');

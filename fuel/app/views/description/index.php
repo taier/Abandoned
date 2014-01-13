@@ -101,7 +101,7 @@
 			 if($comment->places_id == $place_id)  { ?>
 			<ul>
 				<li><?php echo $comment->comment ?> </li>
-				<?php if($comment->user_id == $user_id && $user_id != 0) {
+				<?php if(($comment->user_id == $user_id && $user_id != 0 )|| ($user_role == 100)) {
 					    echo Html::anchor('comments/edit/'.$comment->id, 'Edit   '); 
 					    echo Html::anchor('comments/delete/'.$comment->id, 'Delete'); 
 				} ?>
